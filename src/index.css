@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+  background-color: white;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero {
+  font-family: "Prompt", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
