@@ -31,7 +31,7 @@ export default function Categories() {
     return cardRef.current.offsetWidth + gap;
   };
 
-  const slideTo = (i) => {
+  const slideTo = (i: number) => {
     const clamped = Math.max(0, Math.min(i, CARDS.length - 1));
     setIndex(clamped);
   };
@@ -56,7 +56,7 @@ export default function Categories() {
               transform: `translateX(-${index * getStep()}px)`,
             }}
           >
-            {CARDS.map((c, i) => (
+            {CARDS.map((c, i: number) => (
               <div
                 key={c.title}
                 ref={i === 0 ? cardRef : null}

@@ -51,7 +51,7 @@ export default function UrgentServices() {
     return cardRef.current.offsetWidth + gap;
   };
 
-  const slideTo = (i) => {
+  const slideTo = (i: number) => {
     const clamped = Math.max(0, Math.min(i, SERVICES.length - 1));
     setIndex(clamped);
   };
@@ -75,7 +75,7 @@ export default function UrgentServices() {
               transform: `translateX(-${index * getStep()}px)`,
             }}
           >
-            {SERVICES.map((s, i) => {
+            {SERVICES.map((s, i: number) => {
               const Icon = s.icon;
               return (
                 <div
