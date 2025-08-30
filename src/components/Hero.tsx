@@ -1,6 +1,5 @@
 import type { Variants } from "framer-motion";
-import { easeIn, easeOut, easeInOut } from "framer-motion";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
@@ -10,10 +9,9 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
-  // Variants for staggered text
   const textVariants: Variants = {
     hidden: { x: -100, opacity: 0 },
-    visible: (i: number) => ({
+    visible: ((i: number) => ({
       x: 0,
       opacity: 1,
       transition: {
@@ -21,12 +19,12 @@ export default function Hero() {
         duration: 0.8,
         ease: easeInOut,
       },
-    }),
+    })) as any, // <-- cast to any for function-based variant
   };
 
   const thisVariants: Variants = {
     hidden: { x: 100, opacity: 0 },
-    visible: (i: number) => ({
+    visible: ((i: number) => ({
       x: 0,
       opacity: 1,
       transition: {
@@ -34,10 +32,9 @@ export default function Hero() {
         duration: 0.8,
         ease: easeInOut,
       },
-    }),
+    })) as any, // <-- cast to any
   };
 
-  // Headings to render
   const headings = [
     { text: "Hire Trusted", variant: textVariants },
     { text: "Professionals", variant: thisVariants, className: "text-red-600 my-2 md:my-1" },
@@ -47,7 +44,6 @@ export default function Hero() {
   return (
     <section className="w-full bg-gray-100 py-20 px-3 md:px-6 flex flex-col items-start">
       <div className="max-w-4xl text-left">
-        {/* Animated Headings */}
         {headings.map((item, index) => (
           <motion.h1
             key={index}
@@ -62,7 +58,6 @@ export default function Hero() {
           </motion.h1>
         ))}
 
-        {/* Input and Button */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <input
             type="text"
