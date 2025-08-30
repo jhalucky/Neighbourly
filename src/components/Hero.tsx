@@ -1,52 +1,77 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
-  const heroRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (heroRef.current) {
-      const tl = gsap.timeline();
-      tl.from(heroRef.current.querySelectorAll("h1"), {
-        x: -100,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power3.out",
-      })
-      .from(heroRef.current.querySelector("input"), {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-      }, "-=0.5")
-      .from(heroRef.current.querySelector("button"), {
-        scale: 0.8,
-        opacity: 0,
-        duration: 0.6,
-        ease: "back.out(1.7)",
-      }, "-=0.4");
-    }
+    setIsVisible(true);
   }, []);
 
-  return (
-    <section 
-      ref={heroRef}
-      className="py-20 overflow-x-hidden px-4 md:px-20 bg-gradient-to-r from-black to-gray-900 text-white"
-    >
-      <div>
-        <h1 className="text-5xl md:text-8xl mb-2 md:mb-5">Hire Trusted</h1>
-        <h1 className="text-5xl md:text-9xl text-red-600">Professionals</h1>
-        <h1 className="text-5xl md:text-8xl mt-2 md:mt-5">Near You</h1>
-      </div>
+  const textVariants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: (i: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: i * 0.4, duration: 0.8, ease: "easeOut" },
+    }),
+  };
 
-      <div className="mt-8">
-        <input
-          className="border border-gray-600 bg-black/70 text-white py-2 px-4 rounded w-72 focus:outline-none focus:ring-2 focus:ring-red-600"
-          placeholder="Enter your area/pincode"
-        />
-        <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded ml-2 shadow-lg shadow-red-600/40 transition">
-          Search
-        </button>
+  const thisVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: (i: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: i * 0.4, duration: 0.8, ease: "easeOut" },
+    }),
+  };
+
+  return (
+    <section className="w-full bg-gray-100 py-20 px-3 md:px-6 flex flex-col items-start">
+      <div className="max-w-4xl text-left">
+        {/* Animated Heading */}
+        <motion.h1
+          custom={0}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={textVariants}
+          className="text-4xl sm:text-5xl md:text-7xl"
+        >
+          Hire Trusted
+        </motion.h1>
+
+        <motion.h1
+          custom={1}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={thisVariants}
+          className="text-5xl sm:text-8xl md:text-8xl text-red-600 my-2 md:my-1"
+        >
+          Professionals
+        </motion.h1>
+
+        <motion.h1
+          custom={2}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={textVariants}
+          className="text-4xl sm:text-5xl md:text-7xl"
+        >
+          Near You
+          <span className="text-red-600">.</span>
+        </motion.h1>
+
+        {/* Input and Button */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <input
+            type="text"
+            placeholder="Enter your location"
+            className="px-4 py-3 border border-gray-300 rounded-lg flex-1 text-lg focus:ring-2 focus:ring-red-600 outline-none"
+          />
+          <button className="px-6 py-3 bg-red-600 text-white text-lg font-semibold rounded-lg hover:bg-red-700 transition">
+            Get Started
+          </button>
+        </div>
       </div>
     </section>
   );

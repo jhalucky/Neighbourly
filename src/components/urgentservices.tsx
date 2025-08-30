@@ -1,137 +1,33 @@
-import { useEffect, useRef, useState } from "react";
-import { 
-  Ambulance, 
-  FireExtinguisher, 
-  ShieldAlert, 
-  PhoneCall, 
-  Hospital, 
-  Radiation, 
-  Bug, 
-  Zap, 
-  CloudRainWind, 
-  Anchor, 
-  Activity, 
-  Bell, 
-} from "lucide-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Ambulance, Phone, Shield, Flame, Home, Zap } from "lucide-react";
 
-const SERVICES = [
-  { title: "Ambulance", icon: Ambulance },
-  { title: "Fire Services", icon: FireExtinguisher },
-  { title: "Police", icon: ShieldAlert },
-  { title: "Emergency Call", icon: PhoneCall },
-  { title: "Hospital", icon: Hospital },
-  { title: "Radiation Control", icon: Radiation },
-  { title: "Pest Control", icon: Bug },
-  { title: "Electric Emergency", icon: Zap },
-  { title: "Flood Rescue", icon: CloudRainWind },
-  { title: "Coast Guard", icon: Anchor },
-  { title: "Medical Alert", icon: Activity },
-  { title: "SOS Alert", icon: Bell },
+const services = [
+  { icon: <Ambulance className="w-10 h-10 text-red-500" />, title: "Ambulance", desc: "Call emergency medical services instantly." },
+  { icon: <Phone className="w-10 h-10 text-blue-500" />, title: "Police", desc: "Connect with local police for urgent help." },
+  { icon: <Flame className="w-10 h-10 text-orange-500" />, title: "Fire Services", desc: "Report and handle fire emergencies quickly." },
+  { icon: <Zap className="w-10 h-10 text-yellow-500" />, title: "Electrician", desc: "Fix sudden electrical hazards at home." },
+  { icon: <Shield className="w-10 h-10 text-green-500" />, title: "Security", desc: "Neighbourhood watch and urgent protection." },
+  { icon: <Home className="w-10 h-10 text-purple-500" />, title: "Locksmith", desc: "Quick help for lockouts and emergencies." },
 ];
 
 export default function UrgentServices() {
-  const trackRef = useRef<HTMLDivElement | null>(null);
-  const cardRef = useRef<HTMLDivElement | null>(null);
-  const [index, setIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen size
-  useEffect(() => {
-    const setBP = () => setIsMobile(window.innerWidth < 768);
-    setBP();
-    window.addEventListener("resize", setBP);
-    return () => window.removeEventListener("resize", setBP);
-  }, []);
-
-  // Calculate step
-  const getStep = () => {
-    if (!cardRef.current) return 0;
-    const gap = 16;
-    return cardRef.current.offsetWidth + gap;
-  };
-
-  const slideTo = (i: number) => {
-    const clamped = Math.max(0, Math.min(i, SERVICES.length - 1));
-    setIndex(clamped);
-  };
-
-  const next = () => slideTo(index + 1);
-  const prev = () => slideTo(index - 1);
-
   return (
-    <section className="py-12">
-      <h3 className="text-3xl md:text-4xl font-bold text-center mb-6">
-        Emergency Services
-      </h3>
-
-      {isMobile ? (
-        <div className="relative overflow-hidden">
-          <div
-            ref={trackRef}
-            className="flex items-stretch transition-transform duration-500 ease-in-out"
-            style={{
-              gap: 16,
-              transform: `translateX(-${index * getStep()}px)`,
-            }}
-          >
-            {SERVICES.map((s, i: number) => {
-              const Icon = s.icon;
-              return (
-                <div
-                  key={s.title}
-                  ref={i === 0 ? cardRef : null}
-                  className="flex-shrink-0 w-[85vw] h-64 rounded-xl shadow-lg p-4 bg-white justify-center items-center flex flex-col"
-                >
-                  <Icon className="w-20 h-20 text-red-600 mb-4" />
-                  <h4 className="text-lg font-semibold text-gray-900 text-center">{s.title}</h4>
-                  <button className="mt-3 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-full">
-                    Call {s.title}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Chevrons */}
-          {index > 0 && (
-            <button
-              aria-label="Previous"
-              onClick={prev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-900/80 text-white p-2 rounded-full"
+    <section className="bg-white py-16">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-12">Urgent Services</h2>
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition hover:-translate-y-1"
             >
-              <ChevronLeft size={18} />
-            </button>
-          )}
-          {index < SERVICES.length - 1 && (
-            <button
-              aria-label="Next"
-              onClick={next}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-900/80 text-white p-2 rounded-full"
-            >
-              <ChevronRight size={18} />
-            </button>
-          )}
+              <div className="flex justify-center mb-3">{service.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-800">{service.title}</h3>
+              <p className="text-sm text-gray-600">{service.desc}</p>
+            </div>
+          ))}
         </div>
-      ) : (
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {SERVICES.map((s) => {
-            const Icon = s.icon;
-            return (
-              <div
-                key={s.title}
-                className="rounded-xl shadow-lg p-6 bg-white w-full h-64 justify-center items-center flex flex-col"
-              >
-                <Icon className="w-20 h-20 text-red-600 mb-4" />
-                <h4 className="text-lg font-semibold text-center text-gray-900">{s.title}</h4>
-                <button className="mt-3 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-full">
-                  Call {s.title}
-                </button>
-              </div>
-            );
-          })}
-        </div>
-      )}
+      </div>
     </section>
   );
 }
