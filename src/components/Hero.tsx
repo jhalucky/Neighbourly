@@ -1,5 +1,6 @@
 import type { Variants } from "framer-motion";
-import { motion, easeInOut } from "framer-motion";
+import { easeIn, easeOut, easeInOut } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
