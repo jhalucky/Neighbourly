@@ -2,6 +2,8 @@ import Hero from "./components/Hero";
 import Categories from "./components/Categories";
 import Header from "./components/Header";
 import AllCategories from "./components/AllCategories";
+import UrgentServices from "./components/urgentservices";
+import Testimonials from "./components/testimonials";
 
 export default function App() {
   return (
@@ -15,6 +17,12 @@ export default function App() {
       </section>
       <section className="">
         <AllCategories />
+      </section>
+      <section>
+        <UrgentServices />
+      </section>
+      <section>
+        <Testimonials />
       </section>
     </div>
   );

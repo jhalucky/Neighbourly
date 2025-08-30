@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const CARDS = [
-  { title: "Electricians", img: "/electricity.jpg" },
-  { title: "Plumbing", img: "/plumbing.jpg" },
-  { title: "Cleaning", img: "/cleaning.jpg" },
-  { title: "Painting", img: "/painting.jpg" },
-  { title: "Carpenters", img: "/carpenter.jpg" },
-  { title: "Gardening", img: "/gardening.jpg" }, 
+  {title: "Pharmacy", img: "/pharmacy.jpg"},
+  { title: "Gym and Fitness", img: "/gym.jpg" },
+  { title: "Laundry", img: "/laundry.jpg" },
+  { title: "Electronics Repair", img: "/electronics.jpg" },
+  { title: "Salons", img: "/salons.jpg" },
+  { title: "Watertank Cleaning", img: "/watertank.jpg" },
 ];
 
 
@@ -68,7 +68,7 @@ export default function AllCategories() {
                   className="w-36 h-36 object-cover rounded-md mb-3"
                 />
                 <h4 className="text-lg font-semibold text-gray-900 text-center">{c.title}</h4>
-                <button className="mt-2 px-4 py-2 mb-2 bg-red-600 hover:bg-red-700 text-white rounded-full">Find Service</button>
+                <button className="mt-2 px-4 py-2 mb-2 bg-red-600 hover:bg-red-700 text-white rounded-full">Check Nearby</button>
               </div>
             ))}
           </div>
