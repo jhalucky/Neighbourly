@@ -11,12 +11,12 @@ const CARDS = [
 ];
 
 export default function Categories() {
-  const trackRef = useRef(null);
-  const cardRef = useRef(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // responsive breakpoint
+  
   useEffect(() => {
     const setBP = () => setIsMobile(window.innerWidth < 768);
     setBP();
@@ -24,7 +24,7 @@ export default function Categories() {
     return () => window.removeEventListener("resize", setBP);
   }, []);
 
-  // measure card width
+  
   const getStep = () => {
     if (!cardRef.current) return 0;
     const gap = 16;

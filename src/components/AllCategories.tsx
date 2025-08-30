@@ -12,8 +12,8 @@ const CARDS = [
 
 
 export default function AllCategories() {
-  const trackRef = useRef(null);
-  const cardRef = useRef(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
