@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
+
 import { useState, useEffect } from "react";
 
 export default function Hero() {
@@ -8,12 +10,12 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
-  const textVariants = {
+  const textVariants ={
     hidden: { x: -100, opacity: 0 },
     visible: (i: number) => ({
       x: 0,
       opacity: 1,
-      transition: { delay: i * 0.4, duration: 0.8, ease: "easeOut" },
+      transition: { delay: i * 0.4, duration: 0.8, ease: easeInOut },
     }),
   };
 
@@ -22,7 +24,7 @@ export default function Hero() {
     visible: (i: number) => ({
       x: 0,
       opacity: 1,
-      transition: { delay: i * 0.4, duration: 0.8, ease: "easeOut" },
+      transition: { delay: i * 0.4, duration: 0.8, ease: easeInOut },
     }),
   };
 
