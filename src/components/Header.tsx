@@ -5,9 +5,12 @@ export default function Header() {
 
   return (
     <header className="w-full px-6 py-4 flex items-center justify-between bg-white relative">
+      <div className="flex items-center">
+      <img src="/favicon.svg" alt="Neighbourly Logo" className="w-16 h-16" />
       <h1 className="text-2xl md:text-3xl font-bold">
         neighbourly<span className="text-red-600">.</span>
       </h1>
+      </div>
 
       {/* Desktop nav */}
       <nav className="hidden md:block">

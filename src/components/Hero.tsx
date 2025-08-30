@@ -43,7 +43,8 @@ export default function Hero() {
 
   return (
     <section className="w-full bg-gray-100 py-20 px-3 md:px-6 flex flex-col items-start">
-      <div className="max-w-4xl text-left">
+     
+        <div className="max-w-4xl text-left">
         {headings.map((item, index) => (
           <motion.h1
             key={index}
@@ -69,6 +70,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
+    
     </section>
   );
 }
