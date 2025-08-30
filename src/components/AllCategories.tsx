@@ -10,22 +10,22 @@ const CARDS = [
   { title: "Gardening", img: "/gardening.jpg" }, 
 ];
 
-export default function Categories() {
+
+export default function AllCategories() {
   const trackRef = useRef(null);
   const cardRef = useRef(null);
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // responsive breakpoint
-  useEffect(() => {
+    useEffect(() => {
     const setBP = () => setIsMobile(window.innerWidth < 768);
     setBP();
     window.addEventListener("resize", setBP);
     return () => window.removeEventListener("resize", setBP);
   }, []);
 
-  // measure card width
-  const getStep = () => {
+
+    const getStep = () => {
     if (!cardRef.current) return 0;
     const gap = 16;
     return cardRef.current.offsetWidth + gap;
@@ -39,13 +39,13 @@ export default function Categories() {
   const next = () => slideTo(index + 1);
   const prev = () => slideTo(index - 1);
 
+
   return (
     <section className="py-10">
       <h3 className="text-3xl md:text-4xl font-bold text-center mb-6">
-        Popular Services
+        All Services
       </h3>
 
-      {/* MOBILE SLIDER */}
       {isMobile ? (
         <div className="relative overflow-hidden">
           <div

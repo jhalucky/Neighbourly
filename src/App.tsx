@@ -1,24 +1,21 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Categories from './components/Categories'
+import Hero from "./components/Hero";
+import Categories from "./components/Categories";
+import Header from "./components/Header";
+import AllCategories from "./components/AllCategories";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className='bg-white'>
-      <section>
-        <Header />
-      </section>
-      <section className='mt-10 justify-center items-center flex bg-[url("city.jpg")] bg-no-repeat bg-cover mx-5 rounded-lg'>
+    <div className="bg-white text-black min-h-screen w-screen overflow-hidden">
+      <Header />
+      <section className="overflow-x-hidden">
         <Hero />
       </section>
-      <section className='mt-10 justify-center items-center flex'>
+      <section className="">
         <Categories />
       </section>
+      <section className="">
+        <AllCategories />
+      </section>
     </div>
-  )
+  );
 }
-
-export default App
