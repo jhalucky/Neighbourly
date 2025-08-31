@@ -4,8 +4,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full px-6 py-4 flex items-center justify-between bg-white relative">
-      <div className="flex items-center">
+    <header className="w-full px-3 md:px-6 py-4 flex items-center justify-between bg-white relative">
+      <div className="flex items-center mr-2">
       <img src="/favicon.svg" alt="Neighbourly Logo" className="w-16 h-16" />
       <h1 className="text-2xl md:text-3xl font-bold">
         neighbourly<span className="text-red-600">.</span>
