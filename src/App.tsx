@@ -2,8 +2,8 @@ import Hero from "./components/Hero";
 import Categories from "./components/Categories";
 import Header from "./components/Header";
 import AllCategories from "./components/AllCategories";
-import UrgentServices from "./components/urgentservices";
-import Testimonials from "./components/testimonials";
+import UrgentServices from "./components/UrgentServices";
+import Testimonials from "./components/Testimonials";
 import About from "./components/About";
 
 export default function App() {
