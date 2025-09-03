@@ -45,7 +45,7 @@ export default function Header() {
       };
     }, []);
     return (
-      <a ref={linkRef} href="#home" className="relative text-gray-900 transition-colors">
+      <a ref={linkRef} href={href} className="relative text-gray-900 transition-colors">
         <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:content-[''] hover:after:w-full after:transition-all after:duration-300">
           {children}
         </span>
