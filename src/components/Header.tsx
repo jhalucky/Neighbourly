@@ -30,7 +30,7 @@ export default function Header() {
     return () => ctx.revert();
   }, []);
 
-  const NavLink = ({ children }: { children: React.ReactNode }) => {
+  const NavLink = ({ href, children, }: { href:string, children: React.ReactNode }) => {
     const linkRef = useRef<HTMLAnchorElement | null>(null);
     useEffect(() => {
       const el = linkRef.current;
@@ -45,7 +45,7 @@ export default function Header() {
       };
     }, []);
     return (
-      <a ref={linkRef} href="#" className="relative text-gray-900 transition-colors">
+      <a ref={linkRef} href="#home" className="relative text-gray-900 transition-colors">
         <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:content-[''] hover:after:w-full after:transition-all after:duration-300">
           {children}
         </span>
@@ -65,10 +65,10 @@ export default function Header() {
 
         <nav className="hidden md:block">
           <ul className="flex gap-6 text-lg font-medium">
-            <li><NavLink><a href="#home" className="hover:text-red-600">Home</a></NavLink></li>
-            <li><NavLink><a href="#about" className="hover:text-red-600">About</a></NavLink></li>
-            <li><NavLink><a href="#services" className="hover:text-red-600">Services</a></NavLink></li>
-            <li><NavLink><a href="#contact" className="hover:text-red-600">Contact</a></NavLink></li>
+            <li><NavLink href="#home">Home</NavLink></li>
+            <li><NavLink href="#about">About</NavLink></li>
+            <li><NavLink href="#services">Services</NavLink></li>
+            <li><NavLink href="#contact">Contact</NavLink></li>
           </ul>
         </nav>
 
