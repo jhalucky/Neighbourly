@@ -30,28 +30,28 @@ export default function Header() {
     return () => ctx.revert();
   }, []);
 
-  const NavLink = ({ children }: { children: React.ReactNode }) => {
-    const linkRef = useRef<HTMLAnchorElement | null>(null);
-    useEffect(() => {
-      const el = linkRef.current;
-      if (!el) return;
-      const enter = () => gsap.to(el, { color: "#dc2626", duration: 0.2 });
-      const leave = () => gsap.to(el, { color: "#111827", duration: 0.2 });
-      el.addEventListener("mouseenter", enter);
-      el.addEventListener("mouseleave", leave);
-      return () => {
-        el.removeEventListener("mouseenter", enter);
-        el.removeEventListener("mouseleave", leave);
-      };
-    }, []);
-    return (
-      <a ref={linkRef} href="#" className="relative text-gray-900 transition-colors">
-        <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:content-[''] hover:after:w-full after:transition-all after:duration-300">
-          {children}
-        </span>
-      </a>
-    );
-  };
+  // const NavLink = ({ children }: { children: React.ReactNode }) => {
+  //   const linkRef = useRef<HTMLAnchorElement | null>(null);
+  //   useEffect(() => {
+  //     const el = linkRef.current;
+  //     if (!el) return;
+  //     const enter = () => gsap.to(el, { color: "#dc2626", duration: 0.2 });
+  //     const leave = () => gsap.to(el, { color: "#111827", duration: 0.2 });
+  //     el.addEventListener("mouseenter", enter);
+  //     el.addEventListener("mouseleave", leave);
+  //     return () => {
+  //       el.removeEventListener("mouseenter", enter);
+  //       el.removeEventListener("mouseleave", leave);
+  //     };
+  //   }, []);
+  //   return (
+  //     <a ref={linkRef} href="#" className="relative text-gray-900 transition-colors">
+  //       <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:content-[''] hover:after:w-full after:transition-all after:duration-300">
+  //         {children}
+  //       </span>
+  //     </a>
+  //   );
+  // };
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50 w-full px-3 md:px-6 py-4 bg-white">
