@@ -2,7 +2,7 @@ import Hero from "./components/Hero";
 import Categories from "./components/Categories";
 import Header from "./components/Header";
 import AllCategories from "./components/AllCategories";
-import UrgentServices from "./components/Urgentservices";
+import UrgentServices from "./components/urgentservices";
 import Testimonials from "./components/testimonials";
 import About from "./components/About";
 
