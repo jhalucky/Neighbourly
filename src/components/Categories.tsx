@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const CARDS = [
   { title: "Electricians", img: "/electricity.jpg" },
@@ -14,14 +16,64 @@ export default function Categories() {
   const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (trackRef.current) {
-      gsap.to(trackRef.current, {
-        xPercent: -50,
-        repeat: -1,
-        ease: "linear",
-        duration: 30,
+    const ctx = gsap.context(() => {
+      if (!trackRef.current) return;
+
+      // cards reveal when section enters
+      const cards = gsap.utils.toArray<HTMLDivElement>(".cat-card");
+      gsap.from(cards, {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: trackRef.current,
+          start: "top 85%",
+        },
       });
-    }
+
+      // hover lift
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () =>
+          gsap.to(card, { y: -6, duration: 0.25, ease: "power2.out" })
+        );
+        card.addEventListener("mouseleave", () =>
+          gsap.to(card, { y: 0, duration: 0.25, ease: "power2.out" })
+        );
+      });
+
+      // marquee (right -> left), seamless
+      const totalWidth = trackRef.current.scrollWidth / 2;
+      const tween = gsap.to(trackRef.current, {
+        x: -totalWidth,
+        duration: 35,
+        ease: "linear",
+        repeat: -1,
+        modifiers: {
+          x: gsap.utils.unitize((x: string) => (parseFloat(x) % totalWidth)),
+        },
+        scrollTrigger: {
+          trigger: trackRef.current,
+          start: "top 90%",
+          toggleActions: "play pause resume pause",
+        },
+      });
+
+      // pause on hover
+      const wrap = trackRef.current.parentElement!;
+      const pause = () => tween.pause();
+      const play = () => tween.resume();
+      wrap.addEventListener("mouseenter", pause);
+      wrap.addEventListener("mouseleave", play);
+
+      return () => {
+        wrap.removeEventListener("mouseenter", pause);
+        wrap.removeEventListener("mouseleave", play);
+      };
+    }, trackRef);
+
+    return () => ctx.revert();
   }, []);
 
   const doubled = [...CARDS, ...CARDS];
@@ -33,11 +85,11 @@ export default function Categories() {
       </h3>
 
       <div className="overflow-hidden w-full">
-        <div ref={trackRef} className="flex gap-6 w-max">
+        <div ref={trackRef} className="flex gap-6 w-max px-4">
           {doubled.map((c, i) => (
             <div
               key={i}
-              className="w-64 h-72 flex-shrink-0 rounded-xl shadow-lg bg-white border border-gray-100 flex flex-col items-center justify-center p-4 hover:scale-105 transition"
+              className="cat-card w-64 h-72 flex-shrink-0 rounded-xl shadow-lg bg-white border border-gray-100 flex flex-col items-center justify-center p-4"
             >
               <img
                 src={c.img}
