@@ -10,7 +10,7 @@ export async function fetchNearbyServices(): Promise<any[]> {
 
         try {
           const res = await fetch(
-            `https://neighbourly-0aig.onrender.com`
+            `https://neighbourly-2-k562.onrender.com/services?lat=${latitude}&lng=${longitude}`
           );
           if (!res.ok) throw new Error("Failed to fetch services");
           const data = await res.json();
