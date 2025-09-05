@@ -1,0 +1,107 @@
+{
+  "center": {
+    "lat": 28.55154,
+    "lng": 77.26942,
+    "note": "Approx center: Okhla Industrial Estate (Harkesh Nagar)"
+  },
+  "services": [
+    {"id":1,"category":"electricians","name":"SparkPro Point","phone":"9332181960","address":"16, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.553213,"lng":77.26277},
+    {"id":2,"category":"electricians","name":"VoltWorks & Co.","phone":"9838637940","address":"82, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.548164,"lng":77.269495},
+    {"id":3,"category":"electricians","name":"WireWize Services","phone":"9511615594","address":"23, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.550611,"lng":77.26631},
+    {"id":4,"category":"electricians","name":"PowerFix Hub","phone":"9184959310","address":"117, Okhla Industrial Estate Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.551053,"lng":77.264168},
+    {"id":5,"category":"electricians","name":"ElectraCare & Co.","phone":"9647525534","address":"37, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.557363,"lng":77.274394},
+    
+    {"id":6,"category":"plumbers","name":"PipePros Services","phone":"9276483503","address":"17, Mathura Rd Service Ln, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.55316,"lng":77.269898},
+    {"id":7,"category":"plumbers","name":"FlowRight","phone":"9537672423","address":"288, IIIT-D Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.550354,"lng":77.263347},
+    {"id":8,"category":"plumbers","name":"LeakStop","phone":"9653287101","address":"79, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.548693,"lng":77.270604},
+    {"id":9,"category":"plumbers","name":"BlueValve","phone":"9166978480","address":"59, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.54746,"lng":77.271947},
+    {"id":10,"category":"plumbers","name":"DrainWale Point","phone":"9146270482","address":"260, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556157,"lng":77.272932},
+    
+    {"id":11,"category":"groceries","name":"DailyMart","phone":"9932528809","address":"166, Jamia Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.555986,"lng":77.266598},
+    {"id":12,"category":"groceries","name":"FreshBasket Point","phone":"9303911718","address":"65, Pocket B Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.545774,"lng":77.275427},
+    {"id":13,"category":"groceries","name":"LocalCart Services","phone":"9489638346","address":"192, Jamia Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.553457,"lng":77.275676},
+    {"id":14,"category":"groceries","name":"NeighbourGrocer Services","phone":"9315098393","address":"4, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556335,"lng":77.268741},
+    {"id":15,"category":"groceries","name":"GreenGrain & Co.","phone":"9051834738","address":"68, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.554034,"lng":77.263244},
+    {"id":16,"category":"groceries","name":"MetroFresh Hub","phone":"9376311656","address":"211, Jamia Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556766,"lng":77.270415},
+    
+    {"id":17,"category":"salons","name":"StyleHub & Co.","phone":"9065133387","address":"72, Ma Anandmayee Marg, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.555906,"lng":77.263178},
+    {"id":18,"category":"salons","name":"ChicCuts & Co.","phone":"9781080132","address":"209, Jamia Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.547742,"lng":77.268897},
+    {"id":19,"category":"salons","name":"GlamNest & Co.","phone":"9260647468","address":"250, Pocket B Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.551316,"lng":77.274525},
+    {"id":20,"category":"salons","name":"UrbanLooks & Co.","phone":"9980500978","address":"272, Pocket B Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.547819,"lng":77.265468},
+    {"id":21,"category":"salons","name":"RedComb Services","phone":"9191361939","address":"21, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.546223,"lng":77.26953},
+    
+    {"id":22,"category":"gyms","name":"FitForge","phone":"9854353462","address":"154, Jamia Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.546524,"lng":77.271623},
+    {"id":23,"category":"gyms","name":"IronCore & Co.","phone":"9079911838","address":"136, Pocket B Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.549334,"lng":77.272946},
+    {"id":24,"category":"gyms","name":"PulseBox Services","phone":"9542784980","address":"284, Okhla Industrial Estate Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556739,"lng":77.274752},
+    {"id":25,"category":"gyms","name":"MetroFit Services","phone":"9411824493","address":"176, NSIC Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556721,"lng":77.26387},
+    
+    {"id":26,"category":"pharmacy","name":"MediPlus","phone":"9740164005","address":"67, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.55379,"lng":77.274361},
+    {"id":27,"category":"pharmacy","name":"HealthKart Hub","phone":"9868011280","address":"190, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.557298,"lng":77.264682},
+    {"id":28,"category":"pharmacy","name":"CareChem & Co.","phone":"9450533158","address":"209, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.55217,"lng":77.268437},
+    {"id":29,"category":"pharmacy","name":"Rx365 Services","phone":"9226025634","address":"82, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.554534,"lng":77.275381},
+    {"id":30,"category":"pharmacy","name":"CureCorner Hub","phone":"9337543303","address":"205, Mathura Rd Service Ln, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.546837,"lng":77.27463},
+    
+    {"id":31,"category":"cleaners","name":"SparkClean Point","phone":"9586850142","address":"298, Okhla Industrial Estate Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.548883,"lng":77.263392},
+    {"id":32,"category":"cleaners","name":"DustAway Point","phone":"9569816934","address":"23, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.545999,"lng":77.270772},
+    {"id":33,"category":"cleaners","name":"ShineCrew","phone":"9356159514","address":"260, Okhla Industrial Estate Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.550773,"lng":77.269699},
+    {"id":34,"category":"cleaners","name":"NeatNest Point","phone":"9823662994","address":"208, IIIT-D Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.553543,"lng":77.266987},
+    
+    {"id":35,"category":"painters","name":"ColorCrew Services","phone":"9699577738","address":"243, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.555545,"lng":77.266674},
+    {"id":36,"category":"painters","name":"ProBrush","phone":"9951343320","address":"24, NSIC Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.547576,"lng":77.263607},
+    {"id":37,"category":"painters","name":"HueHouse & Co.","phone":"9769367632","address":"3, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.557347,"lng":77.270978},
+    {"id":38,"category":"painters","name":"PrimePaints","phone":"9708317278","address":"287, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.554881,"lng":77.265484},
+    
+    {"id":39,"category":"laundry","name":"SpinCycle Hub","phone":"9986872774","address":"127, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.549348,"lng":77.272994},
+    {"id":40,"category":"laundry","name":"FreshFold Hub","phone":"9347143455","address":"277, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.548868,"lng":77.273307},
+    {"id":41,"category":"laundry","name":"UrbanLaundry Services","phone":"9316658760","address":"106, Ma Anandmayee Marg, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5472,"lng":77.265658},
+    {"id":42,"category":"laundry","name":"Press&Go & Co.","phone":"9967054668","address":"280, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.550214,"lng":77.273197},
+    
+    {"id":43,"category":"carpenters","name":"WoodWorks Point","phone":"9670656272","address":"274, Harkesh Nagar Main Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556314,"lng":77.269255},
+    {"id":44,"category":"carpenters","name":"CraftCrew & Co.","phone":"9162720465","address":"109, Jamia Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556423,"lng":77.270706},
+    {"id":45,"category":"carpenters","name":"TimberFix Hub","phone":"9464170805","address":"115, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.549462,"lng":77.273077},
+    {"id":46,"category":"carpenters","name":"CarveRight & Co.","phone":"9033092327","address":"59, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.546363,"lng":77.275822},
+    
+    {"id":47,"category":"fire","name":"Okhla Fire Station Point","phone":"9529912419","address":"14, Okhla Industrial Estate Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.556913,"lng":77.26893},
+    {"id":48,"category":"fire","name":"Govt Fire Control Hub","phone":"9631931491","address":"290, Harkesh Nagar Main Rd, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.55245,"lng":77.275132},
+    
+    {"id":49,"category":"police","name":"Okhla Police Station Point","phone":"9185067165","address":"236, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.549706,"lng":77.268417},
+    {"id":50,"category":"police","name":"Govt Police Control","phone":"9498776945","address":"126, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.547376,"lng":77.264886},
+
+    {"id":51,"category":"gardeners","name":"GreenThumb Services","phone":"9876543210","address":"45, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5525,"lng":77.2670},
+    {"id":52,"category":"gardeners","name":"PlantCare Hub","phone":"9876543211","address":"88, Pocket B Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5560,"lng":77.2690},
+    {"id":53,"category":"gardeners","name":"EcoGarden Services","phone":"9876543214","address":"101, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5542,"lng":77.2684},
+    {"id":54,"category":"gardeners","name":"BloomRight Hub","phone":"9876543215","address":"67, IIIT-D Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5519,"lng":77.2662},
+    {"id":55,"category":"gardeners","name":"UrbanGreen Point","phone":"9876543216","address":"120, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5568,"lng":77.2711},
+
+    {"id":56,"category":"electronics repairs","name":"TechFix Point","phone":"9876543212","address":"123, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5550,"lng":77.2700},
+    {"id":57,"category":"electronics repairs","name":"ElectroCare Hub","phone":"9876543213","address":"77, IIIT-D Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5505,"lng":77.2650},
+    {"id":58,"category":"electronics repairs","name":"GadgetRepair Services","phone":"9876543217","address":"90, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5530,"lng":77.2695},
+    {"id":59,"category":"electronics repairs","name":"FixIT Hub","phone":"9876543218","address":"45, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5512,"lng":77.2678},
+    {"id":60,"category":"electronics repairs","name":"SmartElectro Point","phone":"9876543219","address":"110, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5545,"lng":77.2649},
+    
+    {"id":61,"category":"watertank cleaning","name":"TechFix Point","phone":"9876543212","address":"123, Okhla Phase III Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5550,"lng":77.2700},
+    {"id":62,"category":"watertank cleaning","name":"ElectroCare Hub","phone":"9876543213","address":"77, IIIT-D Road, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5505,"lng":77.2650},
+    {"id":63,"category":"watertank cleaning","name":"GadgetRepair Services","phone":"9876543217","address":"90, Okhla Phase II Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5530,"lng":77.2695},
+    {"id":64,"category":"watertank cleaning","name":"FixIT Hub","phone":"9876543218","address":"45, Pocket A Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5512,"lng":77.2678},
+    {"id":65,"category":"watertank cleaning","name":"SmartElectro Point","phone":"9876543219","address":"110, Okhla Phase I Lane, Harkesh Nagar, Okhla Industrial Estate, New Delhi 110020","lat":28.5545,"lng":77.2649},
+
+    {
+  "id": 66,
+  "name": "Raj Painter",
+  "category": "painters",
+  "phone": "9876543210",
+  "address": "Okhla, New Delhi",
+  "lat": 28.55154,
+  "lng": 77.26942
+},
+{
+  "id": 67,
+  "name": "Green Leaf Gardening",
+  "category": "gardeners",
+  "phone": "9876501234",
+  "address": "Harkesh Nagar, New Delhi",
+  "lat": 28.55200,
+  "lng": 77.26800
+}
+  ]
+}
